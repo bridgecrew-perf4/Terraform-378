@@ -9,13 +9,13 @@ vm-guest-id = "CentOS 8"
 # VMware vSphere configuration 
 
 ## VMware vCenter IP/FQDN
-vsphere-vcenter = "110.45.212.249"
+vsphere-vcenter = "ipip"
 
 # VMware vSphere username used to deploy the infrastructure
 vsphere-user = "administrator@vm.vcenter"
 
 # VMware vSphere password used to deploy the infrastructure
-vsphere-password = "Toast!2Dlsvmfk6&"
+vsphere-password = "passpass"
 
 # Skip the verification of the vCenter SSL certificate (true/false)
 vsphere-unverified-ssl = "true"
