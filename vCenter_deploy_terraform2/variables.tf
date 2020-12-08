@@ -33,10 +33,16 @@ description = "VMWare vSphere cluster"
 default = ""
 }
 
+variable "vsphere-pool" {
+type = string
+description = "VMWare vSphere resource pool"
+
+}
+
 variable "vsphere-template-folder" {
 type = string
 description = "Template folder"
-default = "Templates"
+default = "Template"
 }
 
 #================================#

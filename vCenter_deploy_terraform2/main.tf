@@ -22,10 +22,10 @@ name = var.vm-datastore
 datacenter_id = data.vsphere_datacenter.dc.id
 }
 
-data "vsphere_compute_cluster" "cluster" {
-name = var.vsphere-cluster
-datacenter_id = data.vsphere_datacenter.dc.id
-}
+#data "vsphere_compute_cluster" "cluster" {
+#name = var.vsphere-cluster
+#datacenter_id = data.vsphere_datacenter.dc.id
+#}
 
 data "vsphere_network" "network" {
 name = var.vm-network
@@ -33,15 +33,20 @@ datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 data "vsphere_virtual_machine" "template" {
-name = "/${var.vsphere-datacenter}/vm/${var.vsphere-template-folder}/${var.vm-template-name}"
+name = "/${var.vsphere-datacenter}/${var.vsphere-template-folder}/${var.vm-template-name}"
 datacenter_id = data.vsphere_datacenter.dc.id
+}
+
+data "vsphere_resource_pool" "pool" {
+  name          = "Resources"
+  datacenter_id = data.vsphere_datacenter.dc.id
 }
 
 # Create VMs
 resource "vsphere_virtual_machine" "vm" {
 count = var.vm-count
 name = "${var.vm-name}-${count.index + 1}"
-resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+resource_pool_id = data.vsphere_resource_pool.pool.id
 datastore_id = data.vsphere_datastore.datastore.id
 
 num_cpus = var.vm-cpu

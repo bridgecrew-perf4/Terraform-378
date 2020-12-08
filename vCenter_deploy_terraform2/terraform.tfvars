@@ -1,32 +1,37 @@
 # VMware VMs configuration #
-vm-count = "2"
-vm-name = "kopik8snode"
-vm-template-name = "CentOS7-Template"
-vm-cpu = "2"
-vm-ram = "4096"
-vm-guest-id = "centos7_64Guest"# VMware vSphere configuration 
+vm-count = "1"
+vm-name = "Terraform_Test"
+vm-template-name = "CentOS8_Default"
+vm-cpu = "1"
+vm-ram = "2048"
+vm-guest-id = "CentOS 8"
+
+# VMware vSphere configuration 
 
 ## VMware vCenter IP/FQDN
-vsphere-vcenter = "10.100.123.10"
+vsphere-vcenter = "110.45.212.249"
 
 # VMware vSphere username used to deploy the infrastructure
-vsphere-user = "administrator@kopicloud.local"
+vsphere-user = "administrator@vm.vcenter"
 
 # VMware vSphere password used to deploy the infrastructure
-vsphere-password = "Th1sIsN0tAPassw0rd"
+vsphere-password = "Toast!2Dlsvmfk6&"
 
 # Skip the verification of the vCenter SSL certificate (true/false)
 vsphere-unverified-ssl = "true"
 
 # vSphere datacenter name where the infrastructure will be deployed 
-vsphere-datacenter = "KopiCloud-DC"
+vsphere-datacenter = "Datacenter"
 
 # vSphere cluster name where the infrastructure will be deployed
-vsphere-cluster = "KopiCloud-Cluster"
+#vsphere-cluster = ""
+
+# vSphere hostpool name where the infrastructure will be deployed
+vsphere-pool = "esxigodo250.godo.co.kr"
 
 # vSphere Datastore used to deploy VMs 
-vm-datastore = "KopiCloud-Datastore-01"
+vm-datastore = "datastore250"
 
 # vSphere Network used to deploy VMs 
 vm-network = "VM Network"# Linux virtual machine domain name
-vm-domain = "kopicloud.local"
+#vm-domain = ""
