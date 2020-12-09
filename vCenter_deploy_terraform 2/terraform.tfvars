@@ -9,13 +9,13 @@ vm-guest-id = "CentOS 8"
 # VMware vSphere configuration 
 
 ## VMware vCenter IP/FQDN
-vsphere-vcenter = "ipip"
+vsphere-vcenter = "110.45.212.249"
 
 # VMware vSphere username used to deploy the infrastructure
 vsphere-user = "administrator@vm.vcenter"
 
 # VMware vSphere password used to deploy the infrastructure
-vsphere-password = "passpass"
+vsphere-password = ""
 
 # Skip the verification of the vCenter SSL certificate (true/false)
 vsphere-unverified-ssl = "true"
@@ -24,10 +24,7 @@ vsphere-unverified-ssl = "true"
 vsphere-datacenter = "Datacenter"
 
 # vSphere cluster name where the infrastructure will be deployed
-#vsphere-cluster = ""
-
-# vSphere hostpool name where the infrastructure will be deployed
-vsphere-pool = "esxigodo250.godo.co.kr"
+vsphere-cluster = "cluster01"
 
 # vSphere Datastore used to deploy VMs 
 vm-datastore = "datastore250"
