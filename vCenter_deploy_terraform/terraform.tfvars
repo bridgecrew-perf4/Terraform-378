@@ -1,21 +1,27 @@
 # VMware VMs configuration #
+
 vm-count = "1"
-vm-name = "Terraform_Test"
+
+vm-name = "terraformdev"
+
 vm-template-name = "CentOS8_Default"
-vm-cpu = "1"
-vm-ram = "2048"
-vm-guest-id = "CentOS 8"
+vm-cpu = "2"
+vm-ram = "4096"
+vm-disk = "50"
+vm-firmware = "efi"
 
-# VMware vSphere configuration 
+vm-guest-id = "centos8_64Guest"
 
-## VMware vCenter IP/FQDN
-vsphere-vcenter = "110.45.212.249"
+# VMware vSphere configuration #
+
+# VMware vCenter IP/FQDN
+#vsphere-vcenter = ""
 
 # VMware vSphere username used to deploy the infrastructure
-vsphere-user = "administrator@vm.vcenter"
+#vsphere-user = ""
 
 # VMware vSphere password used to deploy the infrastructure
-vsphere-password = ""
+#vsphere-password = ""
 
 # Skip the verification of the vCenter SSL certificate (true/false)
 vsphere-unverified-ssl = "true"
@@ -30,5 +36,4 @@ vsphere-cluster = "cluster01"
 vm-datastore = "datastore250"
 
 # vSphere Network used to deploy VMs 
-vm-network = "VM Network"# Linux virtual machine domain name
-#vm-domain = ""
+vm-network = "VM Network"
