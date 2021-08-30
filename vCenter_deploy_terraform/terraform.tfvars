@@ -2,15 +2,15 @@
 
 vm-count = "1"
 
-vm-name = "terraformdev"
+vm-name = "gwdev212-226"
 
-vm-template-name = "CentOS8_Default"
+vm-template-name = "CentOS7_Default"
 vm-cpu = "2"
-vm-ram = "4096"
-vm-disk = "50"
-vm-firmware = "efi"
+vm-ram = "8092"
+vm-disk = "150"
+vm-firmware = "bios"
 
-vm-guest-id = "centos8_64Guest"
+vm-guest-id = "centos7_64Guest"
 
 # VMware vSphere configuration #
 
